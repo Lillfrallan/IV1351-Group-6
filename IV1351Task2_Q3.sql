@@ -1,12 +1,12 @@
 SELECT 
-    i.id AS instructor_id,
+    i.instructor_id AS instructor_id,
     CONCAT(i.first_name, ' ', i.last_name) AS instructor_name,
-    COUNT(l.id) AS total_lessons
+    COUNT(l.instructor_id) AS total_lessons
 FROM instructor i
-JOIN lesson l ON i.id = l.instructor_id
+JOIN lesson l ON i.instructor_id = l.instructor_id
 WHERE 
     EXTRACT(MONTH FROM l.date) = EXTRACT(MONTH FROM CURRENT_DATE) AND 
     EXTRACT(YEAR FROM l.date) = EXTRACT(YEAR FROM CURRENT_DATE)
-GROUP BY i.id, i.first_name, i.last_name
-HAVING COUNT(l.id) > 10 -- Replace 10 with the desired lesson threshold
+GROUP BY i.instructor_id, i.first_name, i.last_name
+HAVING COUNT(l.instructor_id) > 2 -- Replace 10 with the desired lesson threshold
 ORDER BY total_lessons DESC;
