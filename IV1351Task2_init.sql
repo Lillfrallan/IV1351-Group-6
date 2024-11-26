@@ -97,11 +97,12 @@ CREATE TABLE rental (
 ALTER TABLE rental ADD CONSTRAINT PK_rental PRIMARY KEY (rental_id);
 
 CREATE TABLE sibling (
- sibling_id SERIAL UNIQUE NOT NULL,
- student_id SERIAL NOT NULL
+ id SERIAL UNIQUE NOT NULL,
+ student_id SERIAL NOT NULL,
+ sibling_student_id SERIAL NOT NULL
 );
 
-ALTER TABLE sibling ADD CONSTRAINT PK_sibling PRIMARY KEY (sibling_id);
+ALTER TABLE sibling ADD CONSTRAINT PK_sibling PRIMARY KEY (id);
 
 CREATE TABLE ensemble_lesson (
  ensemble_lesson_id SERIAL UNIQUE NOT NULL,

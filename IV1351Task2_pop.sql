@@ -18,7 +18,10 @@ INSERT INTO student (contact_person_id, ssn, first_name, last_name, street_addre
 INSERT INTO student (contact_person_id, ssn, first_name, last_name, street_address, phone, email) VALUES (1, '399-14-9036', 'Rachèle', 'Firbank', '7294 Kedzie Road', '887-944-4085', 'cfirbank1@disqus.com');
 INSERT INTO student (contact_person_id, ssn, first_name, last_name, street_address, phone, email) VALUES (2, '728-59-9822', 'Maëlle', 'Ludman', '86360 Carpenter Street', '887-944-4086', 'tludman2@wikispaces.com');
 INSERT INTO student (contact_person_id, ssn, first_name, last_name, street_address, phone, email) VALUES (1, '345-84-9604', 'Anaël', 'Ofener', '3 Blue Bill Park Circle', '887-944-4087', 'tofener3@addthis.com');
-INSERT INTO student (contact_person_id, ssn, first_name, last_name, street_address, phone, email) VALUES (1, '661-44-0051', 'Björn', 'Liebermann', '9915 Schiller Crossing', '800-702-5640', 'cliebermann4@foxnews.com');
+INSERT INTO student (contact_person_id, ssn, first_name, last_name, street_address, phone, email) VALUES (3, '661-44-0051', 'Björn', 'Lieberma', '9915 Schiller Crossing', '800-702-5640', 'cliebermann5@foxnews.com');
+INSERT INTO student (contact_person_id, ssn, first_name, last_name, street_address, phone, email) VALUES (3, '661-44-0052', 'Björne', 'Lieberman', '9915 Schiller Crossing', '800-702-5641', '1@foxnews.com');
+INSERT INTO student (contact_person_id, ssn, first_name, last_name, street_address, phone, email) VALUES (3, '661-44-0053', 'Björnes', 'Liebermann', '9915 Schiller Crossing', '800-702-5642', '2@foxnews.com');
+INSERT INTO student (contact_person_id, ssn, first_name, last_name, street_address, phone, email) VALUES (3, '661-44-0054', 'Björnest', 'Liebermanne', '9915 Schiller Crossing', '800-702-5643', '3@foxnews.com');
 
 INSERT INTO price_scheme (price, lesson_type, discount, skill_level) VALUES (63, 'group_lesson', false, 'beginner');
 INSERT INTO price_scheme (price, lesson_type, discount, skill_level) VALUES (96, 'ensemble_lesson', true, 'intermediate');
@@ -56,8 +59,14 @@ INSERT INTO group_lesson (lesson_id, instrument_type, skill_level, min_student, 
 INSERT INTO group_lesson (lesson_id, instrument_type, skill_level, min_student, max_student) VALUES (9, 'tringle', 'NULL', 3, 7);
 INSERT INTO group_lesson (lesson_id, instrument_type, skill_level, min_student, max_student) VALUES (10, 'tringle', 'NULL', 3, 7);
 
-INSERT INTO sibling (student_id) VALUES (1);
-INSERT INTO sibling (student_id) VALUES (2);
+INSERT INTO sibling (student_id, sibling_student_id) VALUES (1, 2);
+INSERT INTO sibling (student_id, sibling_student_id) VALUES (2, 1);
+INSERT INTO sibling (student_id, sibling_student_id) VALUES (1, 3);
+INSERT INTO sibling (student_id, sibling_student_id) VALUES (3, 1);
+INSERT INTO sibling (student_id, sibling_student_id) VALUES (2, 3);
+INSERT INTO sibling (student_id, sibling_student_id) VALUES (3, 2);
+INSERT INTO sibling (student_id, sibling_student_id) VALUES (4, 5);
+INSERT INTO sibling (student_id, sibling_student_id) VALUES (5, 4);
 
 INSERT INTO rental_instrument (instrument_type, price, brand) VALUES ('Spoon', 50, NULL);
 INSERT INTO rental_instrument (instrument_type, price, brand) VALUES ('Scraper', 55, 'Thomann');
