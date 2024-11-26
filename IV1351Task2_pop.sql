@@ -56,12 +56,6 @@ insert into group_lesson (lesson_id, instrument_type, skill_level, min_student, 
 insert into group_lesson (lesson_id, instrument_type, skill_level, min_student, max_student) values (9, 'tringle', 'NULL', 3, 7);
 insert into group_lesson (lesson_id, instrument_type, skill_level, min_student, max_student) values (10, 'tringle', 'NULL', 3, 7);
 
-insert into ensemble_lesson (lesson_id, genre, min_student, max_student) values (11, 'NULL', 4, 8);
-insert into ensemble_lesson (lesson_id, genre, min_student, max_student) values (12, 'NULL', 4, 5);
-insert into ensemble_lesson (lesson_id, genre, min_student, max_student) values (13, 'NULL', 3, 6);
-insert into ensemble_lesson (lesson_id, genre, min_student, max_student) values (14, 'NULL', 3, 5);
-insert into ensemble_lesson (lesson_id, genre, min_student, max_student) values (15, 'NULL', 4, 5);
-
 insert into sibling (student_id) values (1);
 insert into sibling (student_id) values (2);
 
@@ -78,3 +72,33 @@ insert into can_teach_instrument (instructor_id, instrument_id) values (2, 4);
 insert into can_teach_instrument (instructor_id, instrument_id) values (3, 3);
 insert into can_teach_instrument (instructor_id, instrument_id) values (4, 2);
 insert into can_teach_instrument (instructor_id, instrument_id) values (5, 1);
+
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (1, 5, 2, '1:25:00', '2024-11-18');
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (2, 5, 1, '11:23:00', '2024-11-17');
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (3, 2, 2, '12:21:00', '2024-11-10');
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (2, 3, 3, '6:19:00', '2024-11-26');
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (3, 5, 2, '1:25:00', '2024-11-19');
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (1, 5, 1, '11:23:00', '2024-11-18');
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (2, 2, 2, '12:21:00', '2024-11-17');
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (1, 3, 3, '6:19:00', '2024-11-27');
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (2, 5, 2, '1:25:00', '2024-11-20');
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (3, 5, 1, '11:23:00', '2024-11-19');
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (1, 2, 2, '12:21:00', '2024-11-12');
+insert into lesson (classroom_id, instructor_id, price_id, clock, date) values (3, 3, 3, '6:19:00', '2024-11-28');
+
+insert into ensemble_lesson (lesson_id, genre, min_student, max_student) values (21, 'Jazz', 4, 8);
+insert into ensemble_lesson (lesson_id, genre, min_student, max_student) values (22, 'Pop', 4, 5);
+insert into ensemble_lesson (lesson_id, genre, min_student, max_student) values (23, 'Jazz', 3, 6);
+insert into ensemble_lesson (lesson_id, genre, min_student, max_student) values (24, 'Pop', 3, 5);
+insert into ensemble_lesson (lesson_id, genre, min_student, max_student) values (25, 'Jazz', 4, 5);
+
+insert into ensemble_lesson_student (ensemble_lesson_id, student_id) values (1, 1);
+insert into ensemble_lesson_student (ensemble_lesson_id, student_id) values (1, 2);
+insert into ensemble_lesson_student (ensemble_lesson_id, student_id) values (1, 3);
+insert into ensemble_lesson_student (ensemble_lesson_id, student_id) values (1, 4);
+insert into ensemble_lesson_student (ensemble_lesson_id, student_id) values (1, 5);
+insert into ensemble_lesson_student (ensemble_lesson_id, student_id) values (2, 1);
+insert into ensemble_lesson_student (ensemble_lesson_id, student_id) values (2, 2);
+insert into ensemble_lesson_student (ensemble_lesson_id, student_id) values (2, 3);
+insert into ensemble_lesson_student (ensemble_lesson_id, student_id) values (2, 4);
+insert into ensemble_lesson_student (ensemble_lesson_id, student_id) values (2, 5);
