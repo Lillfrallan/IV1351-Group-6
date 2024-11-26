@@ -1,12 +1,4 @@
 SELECT 
-    EXTRACT(MONTH FROM date) AS month,
-    COUNT(*) AS total_lessons
-FROM lesson
-WHERE EXTRACT(YEAR FROM date) = 2024 -- Replace 2024 with the desired year
-GROUP BY EXTRACT(MONTH FROM date)
-ORDER BY month;
-
-SELECT 
     EXTRACT(MONTH FROM l.date) AS month,
     COUNT(il.lesson_id) AS individual_lessons,
     COUNT(gl.lesson_id) AS group_lessons,

@@ -1,8 +1,17 @@
-SELECT 
-    s.student_id,
-    CONCAT(st.first_name, ' ', st.last_name) AS student_name,
-    COUNT(s.sibling_id) AS sibling_count
-FROM sibling s
-RIGHT JOIN student st ON s.student_id = st.id
-GROUP BY s.student_id, st.first_name, st.last_name
-ORDER BY sibling_count;
+SELECT
+    sibling_count AS "No of Siblings",
+    COUNT(student_id) AS "No of Students"
+FROM (
+    SELECT
+        s.student_id,
+        COUNT(sb.sibling_id) AS sibling_count
+    FROM
+        student s
+    LEFT JOIN sibling sb ON s.student_id = sb.student_id
+    GROUP BY
+        s.student_id
+) sibling_counts
+GROUP BY
+    sibling_count
+ORDER BY
+    sibling_count;
