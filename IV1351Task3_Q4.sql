@@ -1,4 +1,6 @@
-SELECT 
+EXPLAIN ANALYSE
+
+SELECT
     el.ensemble_lesson_id,
     el.genre,
     TO_CHAR(l.date, 'Day') AS weekday,
